@@ -80,8 +80,8 @@ if __name__ == "__main__":
         predGenValue = predGenValue[0]
         predConValue = predConValue[0]
         
-        realGenValue = predGenValue * (maxGenValue - minGenValue) + minGenValue + 1e-4
-        realConValue = predConValue * (maxConValue - minConValue) + minConValue + 1e-4
+        realGenValue = predGenValue * (maxGenValue - minGenValue) + minGenValue + epsilon
+        realConValue = predConValue * (maxConValue - minConValue) + minConValue + epsilon
         
         if realGenValue - realConValue > 1.0:
             _output = list([lastTime.strftime("%Y-%m-%d %H:%M:%S"),
